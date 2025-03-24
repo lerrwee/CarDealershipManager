@@ -1,0 +1,49 @@
+﻿<Page x:Class="CarDealershipManager.RegistrationPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CarDealershipManager"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="RegistrationPage">
+    <Grid Background="#EAEAEA">
+        <Border Background="White" CornerRadius="5" 
+                HorizontalAlignment="Center" VerticalAlignment="Center"
+                Width="350" Height="350">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Text="Регистрация" FontSize="20" FontWeight="Bold" Margin="0,0,0,20" TextAlignment="Center"/>
+
+                <Grid Width="300">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Content="Логин:" Grid.Row="0" Grid.Column="0" Margin="0"/>
+                    <TextBox x:Name="Login_TextBox" Grid.Row="0" Grid.Column="1" Margin="0,5,0,5" MaxLines="15" MaxLength="15"/>
+
+                    <Label Content="Пароль:" Grid.Row="1" Grid.Column="0"  Margin="0"/>
+                    <PasswordBox x:Name="Password_PasswordBox" Grid.Row="1" Grid.Column="1"  Margin="0,5,0,5" FontSize="14" MaxLength="15"/>
+
+                    <Label Content="Повтор пароля:" Grid.Row="2" Grid.Column="0" Margin="0"/>
+                    <PasswordBox x:Name="PasswordConfirm_PasswordBox" Grid.Row="2" Grid.Column="1" Margin="0,5,0,5" FontSize="14" MaxLength="15"/>
+
+                    <Label Content="Роль:" Grid.Row="3" Grid.Column="0" Margin="0"/>
+                    <ComboBox x:Name="Role_ComboBox" Grid.Row="3" Grid.Column="1" Margin="0,5,0,5"/>
+                </Grid>
+
+                <Button x:Name="Registration_Button" Content="Зарегистрироваться" Width="300" Margin="0,10,0,10" Click="Registration_Button_Click"/>
+                <Button x:Name="Back_Button" Content="Назад" Width="300" Click="Back_Button_Click"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Page>
